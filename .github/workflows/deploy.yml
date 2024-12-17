@@ -1,26 +1,26 @@
-name: Addy Foundation Website
+name: Addy Foundation Website 
 
 # Trigger the workflow on every push to the main branch
 on:
   push:
     branches:
-      - main
+      - main # Replace 'main' with your branch name if it's different
 
 jobs:
   deploy:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest # The operating system for the workflow
 
     steps:
       # Step 1: Checkout code from the repository
       - name: Checkout Code
         uses: actions/checkout@v3
-
-      # Step 2: Deploy to Subdomain FTP
-      - name: Deploy to Subdomain FTP
+   
+      # Step 2: Upload the build to Hostinger via FTP
+      - name: Deploy to Hostinger
         uses: SamKirkland/FTP-Deploy-Action@4.3.0
         with:
-          server: ${{ secrets.FTP_HOST }}       # Subdomain-specific FTP server
-          username: ${{ secrets.FTP_USERNAME }} # Subdomain FTP username
-          password: ${{ secrets.FTP_PASSWORD }} # Subdomain FTP password
-          local-dir: ./                         # The directory containing your files
-          server-dir: /public_html                        # Update this to match your subdomain root
+          server: ${{ secrets.FTP_HOST }} # Hostinger FTP server
+          username: ${{ secrets.FTP_USERNAME }} # FTP username
+          password: ${{ secrets.FTP_PASSWORD }} # FTP password
+          local-dir: ./ # The React build directory
+          server-dir: /public_html/updated # The Hostinger web root directory
