@@ -1,4 +1,4 @@
-name: Addy Foundation Website 
+name: Addy Foundation Website
 
 # Trigger the workflow on every push to the main branch
 on:
@@ -14,13 +14,13 @@ jobs:
       # Step 1: Checkout code from the repository
       - name: Checkout Code
         uses: actions/checkout@v3
-   
-      # Step 2: Upload the build to Hostinger via FTP
+
+      # Step 2: Deploy to Hostinger via FTP
       - name: Deploy to Hostinger
-        uses: SamKirkland/FTP-Deploy-Action@4.3.0
+        uses: SamKirkland/FTP-Deploy-Action@4.5.0
         with:
-          server: ${{ secrets.FTP_HOST }} # Hostinger FTP server
-          username: ${{ secrets.FTP_USERNAME }} # FTP username
-          password: ${{ secrets.FTP_PASSWORD }} # FTP password
-          local-dir: ./ # The React build directory
-          server-dir: /public_html/ # The Hostinger web root directory
+          server: ${{ secrets.FTP_HOST }}       # Hostinger FTP server (e.g., ftp.example.com)
+          username: ${{ secrets.FTP_USERNAME }} # Your FTP username
+          password: ${{ secrets.FTP_PASSWORD }} # Your FTP password
+          local-dir: ./                         # The directory containing your HTML files
+          server-dir: /public_html/             # Hostinger's public root directory
