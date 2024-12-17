@@ -4,23 +4,23 @@ name: Addy Foundation Website
 on:
   push:
     branches:
-      - main # Replace 'main' with your branch name if it's different
+      - main
 
 jobs:
   deploy:
-    runs-on: ubuntu-latest # The operating system for the workflow
+    runs-on: ubuntu-latest
 
     steps:
       # Step 1: Checkout code from the repository
       - name: Checkout Code
         uses: actions/checkout@v3
 
-      # Step 2: Deploy to Subdomain via FTP
+      # Step 2: Deploy to Subdomain FTP
       - name: Deploy to Subdomain FTP
         uses: SamKirkland/FTP-Deploy-Action@4.3.0
         with:
           server: ${{ secrets.FTP_HOST }}       # Subdomain-specific FTP server
           username: ${{ secrets.FTP_USERNAME }} # Subdomain FTP username
           password: ${{ secrets.FTP_PASSWORD }} # Subdomain FTP password
-          local-dir: ./                         # The directory containing your website files
-          server-dir: /                         # Root directory for the subdomain FTP account
+          local-dir: ./                         # The directory containing your files
+          server-dir: /                         # Update this to match your subdomain root
