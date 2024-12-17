@@ -23,4 +23,4 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }} # Subdomain FTP username
           password: ${{ secrets.FTP_PASSWORD }} # Subdomain FTP password
           local-dir: ./                         # The directory containing your files
-          server-dir: /                         # Update this to match your subdomain root
+          server-dir: /public_html/updated                         # Update this to match your subdomain root
