@@ -1,0 +1,226 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.heading {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #07074d;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.highlight {
+  color: #6a64f1;
+}
+
+form {
+  padding: 2rem;
+  border: 0.5px solid #6a64f1;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1),
+    0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+}
+
+form:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15),
+    0 6px 8px rgba(0, 0, 0, 0.07);
+}
+
+.formbold-main-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px;
+}
+
+.formbold-form-wrapper {
+  margin: 0 auto;
+  max-width: 550px;
+  width: 100%;
+  background: white;
+}
+
+.formbold-input-flex {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 22px;
+}
+
+.formbold-input-flex>div {
+  width: 50%;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.formbold-textarea {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.formbold-form-input {
+  width: 100%;
+  padding-bottom: 10px;
+  border: none;
+  border-bottom: 1px solid #dde3ec;
+  background: #ffffff;
+  font-weight: 500;
+  font-size: 16px;
+  color: #07074d;
+  outline: none;
+  resize: none;
+}
+
+.formbold-form-input::placeholder {
+  color: #536387;
+}
+
+.formbold-form-input:focus {
+  border-color: #6a64f1;
+}
+
+.formbold-form-label {
+  color: #07074d;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  display: block;
+  margin-bottom: 18px;
+}
+
+.formbold-form-input:focus+.formbold-form-label {
+  color: #6a64f1;
+}
+
+.formbold-input-file {
+  margin-top: 30px;
+}
+
+.formbold-input-file input[type="file"] {
+  position: absolute;
+  top: 6px;
+  left: 0;
+  z-index: -1;
+}
+
+.formbold-input-file .formbold-input-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+}
+
+.formbold-filename-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 22px;
+}
+
+.formbold-filename {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 14px;
+  line-height: 24px;
+  color: #536387;
+}
+
+.formbold-filename svg {
+  cursor: pointer;
+}
+
+.formbold-btn {
+  font-size: 16px;
+  border-radius: 5px;
+  padding: 12px 25px;
+  border: none;
+  font-weight: 500;
+  background-color: #6a64f1;
+  color: white;
+  cursor: pointer;
+  margin-top: 25px;
+}
+
+.formbold-btn:hover {
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 768px) {
+  .formbold-main-wrapper {
+    padding: 20px;
+  }
+
+  .formbold-form-wrapper {
+    max-width: 100%;
+    width: 90%;
+    /* Adjust for smaller screens */
+  }
+
+  .formbold-input-flex {
+    flex-direction: column;
+    /* Stack inputs vertically */
+    gap: 10px;
+  }
+
+  .formbold-input-flex>div {
+    width: 100%;
+    /* Inputs take full width */
+  }
+
+  .formbold-btn {
+    width: 100%;
+    /* Button takes full width */
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  form {
+    padding: 1.5rem;
+    /* Reduce padding for smaller devices */
+  }
+
+  .formbold-form-label {
+    font-size: 12px;
+    /* Smaller font for labels */
+  }
+
+  .formbold-form-input {
+    font-size: 14px;
+    /* Smaller font for inputs */
+  }
+
+  .formbold-btn {
+    padding: 10px 15px;
+    /* Adjust button size */
+  }
+}
