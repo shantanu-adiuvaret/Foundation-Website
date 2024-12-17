@@ -15,13 +15,12 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v3
 
-        
       # Step 2: Deploy to Hostinger via FTP
       - name: Deploy to Hostinger
         uses: SamKirkland/FTP-Deploy-Action@4.3.0
         with:
-          server: ${{ secrets.FTP_HOST }}       # Hostinger FTP server (e.g., ftp.example.com)
+          server: ${{ secrets.FTP_HOST }} # Hostinger FTP server (e.g., ftp.example.com)
           username: ${{ secrets.FTP_USERNAME }} # Your FTP username
           password: ${{ secrets.FTP_PASSWORD }} # Your FTP password
-          local-dir: ./                         # The directory containing your HTML files
-          server-dir: /public_html/             # Hostinger's public root directory
+          local-dir: ./ # The directory containing your HTML files
+          server-dir: ./ # Hostinger's public root directory
