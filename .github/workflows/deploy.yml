@@ -22,4 +22,4 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }} # FTP username
           password: ${{ secrets.FTP_PASSWORD }} # FTP password
           local-dir: ./ # Directory containing your HTML/CSS files
-          server-dir: /updated/ # The Hostinger web root directory
+          server-dir: /public_html/ # The Hostinger web root directory
