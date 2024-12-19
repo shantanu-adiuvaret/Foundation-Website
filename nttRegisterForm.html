@@ -200,7 +200,7 @@
                     <!-- Gender Selection -->
                     <div class="col-md-6">
                       <div class="form-floating">
-                        <select class="form-control" id="gender">
+                        <select class="form-control" id="gender" name="Gender">
                           <option value="Male">Male</option>
                           <option value="Female">Female</option>
                         </select>
@@ -215,6 +215,7 @@
                           class="form-control"
                           id="nationality"
                           placeholder="Nationality"
+                          name="nationality"
                         />
                         <label for="nationality">Nationality</label>
                       </div>
@@ -227,6 +228,7 @@
                           class="form-control"
                           id="aadharCard"
                           placeholder="Aadhar Card No."
+                          name="AdherId"
                         />
                         <label for="aadharCard">Aadhar Card No.</label>
                       </div>
@@ -238,6 +240,7 @@
                           type="text"
                           class="form-control"
                           id="panCard"
+                          name="panCard"
                           placeholder="Pan Card"
                         />
                         <label for="panCard">Pan Card</label>
@@ -255,6 +258,7 @@
                           type="text"
                           class="form-control"
                           id="examName"
+                          name="examName"
                           placeholder="Name of the Examination"
                         />
                         <label for="examName">Name of the Examination</label>
@@ -267,6 +271,7 @@
                           type="text"
                           class="form-control"
                           id="boardUniversity"
+                          name="boardUniversity"
                           placeholder="Board/University"
                         />
                         <label for="boardUniversity">Board/University</label>
@@ -279,6 +284,7 @@
                           type="number"
                           class="form-control"
                           id="completionYear"
+                          name="completionYear"
                           placeholder="Year of Completion"
                         />
                         <label for="completionYear">Year of Completion</label>
@@ -291,6 +297,7 @@
                           type="text"
                           class="form-control"
                           id="gradeMarks"
+                          name="gradeMarks"
                           placeholder="Grade/Div. with % of Marks"
                         />
                         <label for="gradeMarks"
@@ -308,6 +315,7 @@
                           type="text"
                           class="form-control"
                           id="internshipCity"
+                          name="internshipCity"
                           placeholder="City where you would like to do your internship"
                         />
                         <label for="internshipCity">City for Internship</label>
@@ -316,7 +324,11 @@
 
                     <div class="col-md-12">
                       <div class="form-floating">
-                        <select class="form-control" id="placementSupport">
+                        <select
+                          class="form-control"
+                          id="placementSupport"
+                          name="placementSupport"
+                        >
                           <option value="Yes" selected>Yes</option>
                           <option value="No">No</option>
                         </select>
@@ -329,7 +341,11 @@
 
                     <div class="col-md-12">
                       <div class="form-floating">
-                        <select class="form-control" id="schoolSupport">
+                        <select
+                          class="form-control"
+                          id="schoolSupport"
+                          name="schoolSupport"
+                        >
                           <option value="Yes" selected>Yes</option>
                           <option value="No">No</option>
                         </select>
@@ -382,6 +398,7 @@
                           type="checkbox"
                           class="form-check-input"
                           id="agree"
+                          name="agree"
                         />
                         <label class="form-check-label" for="agree"
                           >I agree to the declaration</label
@@ -400,6 +417,7 @@
                         type="file"
                         class="form-control"
                         id="uploadFiles"
+                        name="uploadFiles"
                         multiple
                         style="cursor: pointer"
                       />
