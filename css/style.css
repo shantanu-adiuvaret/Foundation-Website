@@ -465,6 +465,20 @@ h6,
   transition-delay: 0.15s;
 }
 
+.portfolio-item {
+  display: none; /* Hide all by default */
+}
+
+.portfolio-item.vikasanvesh, .portfolio-item.acourire {
+  display: block; /* Show items based on filter */
+}
+
+#portfolio-flters .btn.active {
+  background-color: #007bff;
+  color: white;
+}
+
+
 /*** Footer ***/
 .footer {
   background: url(../img/footer.png) center center no-repeat;
