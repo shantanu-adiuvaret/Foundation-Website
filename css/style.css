@@ -217,6 +217,42 @@ h6,
     background-repeat: no-repeat;
 } */
 
+/* Hero section with background image and overlay */
+.hero-bg {
+  position: relative;
+  background-image: url("../img/bg.jpg"); /* Replace with your image path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white; /* Default text color */
+  padding: 5rem 0; /* Adjust padding for responsiveness */
+}
+
+.hero-bg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(6, 9, 177, 0.7); 
+  z-index: 1;
+}
+
+.hero-bg .container,
+.hero-bg .row,
+.hero-bg .col-12 {
+  position: relative;
+  z-index: 2; /* Ensure content appears above overlay */
+}
+
+/* Make it responsive */
+@media (max-width: 768px) {
+  .hero-bg {
+    padding: 3rem 0; /* Reduce padding on smaller screens */
+  }
+}
+
 /*** Section Title ***/
 .section-title::before {
   position: absolute;
@@ -469,7 +505,8 @@ h6,
   display: none; /* Hide all by default */
 }
 
-.portfolio-item.vikasanvesh, .portfolio-item.acourire {
+.portfolio-item.vikasanvesh,
+.portfolio-item.acourire {
   display: block; /* Show items based on filter */
 }
 
@@ -477,7 +514,6 @@ h6,
   background-color: #007bff;
   color: white;
 }
-
 
 /*** Footer ***/
 .footer {
