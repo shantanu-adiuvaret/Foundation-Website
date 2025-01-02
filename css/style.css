@@ -201,7 +201,7 @@ h6,
 }
 
 /*** Hero Header ***/
-/* .hero-header {
+.hero-header {
     background:
         url(../img/bg-dot.png),
         url(../img/bg-dot.png),
@@ -215,17 +215,17 @@ h6,
         left 45% bottom -1px,
         center bottom -1px;
     background-repeat: no-repeat;
-} */
+}
 
-/* Hero section with background image and overlay */
+
 .hero-bg {
   position: relative;
-  background-image: url("../img/bg.jpg"); /* Replace with your image path */
+  background-image: url("../img/bg.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  color: white; /* Default text color */
-  padding: 5rem 0; /* Adjust padding for responsiveness */
+  color: white; 
+  padding: 5rem 0;
 }
 
 .hero-bg::before {
@@ -243,13 +243,13 @@ h6,
 .hero-bg .row,
 .hero-bg .col-12 {
   position: relative;
-  z-index: 2; /* Ensure content appears above overlay */
+  z-index: 2; 
 }
 
 /* Make it responsive */
 @media (max-width: 768px) {
   .hero-bg {
-    padding: 3rem 0; /* Reduce padding on smaller screens */
+    padding: 3rem 0;
   }
 }
 
