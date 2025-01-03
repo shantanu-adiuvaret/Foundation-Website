@@ -218,40 +218,6 @@ h6,
 } */
 
 
- .bg-board {
-  position: relative;
-  background-image: url("../img/bg.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  color: white; 
-  padding: 5rem 0;
-}
-
-.bg-board::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(69, 71, 187, 0.7); 
-  z-index: 1;
-}
-
-.bg-board .container,
-.bg-board .row,
-.bg-board .col-12 {
-  position: relative;
-  z-index: 2; 
-}
-
-/* Make it responsive */
-@media (max-width: 768px) {
-  .bg-primary {
-    padding: 3rem 0;
-  }
-} */
 
 /*** Section Title ***/
 .section-title::before {
